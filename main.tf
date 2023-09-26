@@ -5,7 +5,7 @@ data "aws_region" "current" {}
 locals {
   sns_topic_arn        = var.sns_topic_arn
   lambda_function_name = try(var.lambda_function_name, "sns-forward")
-  lambda_handler       = try(split(".", basename(var.lambda_source_path))[0], "forward_sns")
+  lambda_handler       = try(split(".", basename(var.lambda_source_path))[0], "notify_sns")
 
   lambda_policy_document = {
     sid       = "AllowWriteToCloudwatchLogs"
