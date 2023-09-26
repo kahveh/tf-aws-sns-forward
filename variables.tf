@@ -11,7 +11,7 @@ variable "lambda_role" {
 variable "lambda_function_name" {
   description = "The name of the Lambda function to create"
   type        = string
-  default     = "notify_slack"
+  default     = "notify_sns"
 }
 
 variable "lambda_description" {
